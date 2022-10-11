@@ -1,0 +1,589 @@
+/* latin */
+@font-face {
+  font-family: "Vast Shadow";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/vastshadow/v13/pe0qMImKOZ1V62ZwbVY9dce9I9s.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+:root, body, ::before, ::after, * {
+  padding: 0;
+  margin: 0;
+}
+
+body, div, section {
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+p, span, ul, li, h1, h2, h3, button {
+  color: white;
+  font-family: "Vast Shadow", cursive;
+}
+
+hr {
+  width: 80%;
+  height: 2px;
+  border: 1px;
+  background-color: #FFFFFF;
+  position: relative;
+  margin: auto;
+}
+
+.footer-div {
+  position: relative;
+  bottom: 0;
+  margin: 1% auto 0 auto;
+}
+
+.header-div {
+  position: relative;
+  height: 20%;
+  width: 100%;
+}
+
+.body-section {
+  position: relative;
+  width: 90vw;
+  box-sizing: border-box;
+  margin: 1em auto;
+  padding: 0.25em;
+}
+
+.page-desc-h2, .page-desc-p {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  margin: 1% auto 1% auto;
+}
+
+.button-holder {
+  width: 100%;
+  box-sizing: border-box;
+}
+.button-holder .button {
+  height: 2em;
+  width: auto;
+  font-size: 1em;
+  padding: 0.25em;
+  text-transform: capitalize;
+}
+
+.modal-container {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: #0077FF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  top: 0;
+  border: 2px solid #F9F871;
+}
+.modal-container .close {
+  height: 5%;
+  width: 3%;
+  font-size: 2em;
+  color: #000000;
+  background-color: #FFEFCA;
+  position: relative;
+  left: 97%;
+  top: 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: color, background-color, cursor;
+}
+.modal-container .close:hover {
+  color: #F9F871;
+  background-color: rgba(249, 249, 113, 0.562);
+  cursor: pointer;
+}
+.modal-container .modal-box {
+  height: 95vh;
+  width: 100%;
+  background-color: rgba(249, 249, 113, 0.562);
+  position: relative;
+  top: 10%;
+  left: 0;
+}
+
+.cards-container {
+  width: 80%;
+  box-sizing: border-box;
+  position: relative;
+  margin: 2% auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+.cards-container .card {
+  box-sizing: border-box;
+  width: 200px;
+  height: 300px;
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+  border: 1px solid #F9F871;
+  border-radius: 10px 10px 0px 0px;
+}
+.cards-container .card .card-img-div {
+  width: 80%;
+  height: 40%;
+}
+.cards-container .card .card-btn-div {
+  width: 80%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.cards-container .card .card-btn-div a {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+}
+.cards-container .card .card-btn-div a button {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background-color: #F9F871;
+  color: #0077FF;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-size: 1em;
+}
+.cards-container .card .card-btn-div a button:hover {
+  cursor: pointer;
+  border: 2px solid #F9F871;
+  box-shadow: 0px 0px 3px 2px #F9F871;
+}
+
+.carddate {
+  width: 20%;
+  height: 30%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2%;
+  border-radius: 10px;
+}
+.carddate .carddate-date {
+  margin: 0.4em auto 0.5em auto;
+  background-color: #F02358;
+  padding: 0.4em;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.carddate .carddate-desc {
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+}
+.carddate .carddate-desc p {
+  text-transform: capitalize;
+  font-size: 1em;
+  overflow-y: hidden;
+  text-align: center;
+}
+.carddate .carddate-desc .more-carddate {
+  font-size: 0.8em;
+  cursor: pointer;
+  color: #FFEFCA;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0.25em;
+}
+.carddate .carddate-desc .more-carddate:hover {
+  color: #F9F871;
+}
+
+.carddate:hover {
+  border: 1px solid #F02358;
+}
+
+.cardbtncontainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: blue;
+  box-sizing: border-box;
+}
+.cardbtncontainer .cardbtn {
+  width: 30%;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #66A2FF;
+  box-sizing: border-box;
+}
+.cardbtncontainer .cardbtn button {
+  background-color: #FF8F7B;
+  margin: auto;
+  padding: 1em;
+  font-size: 1em;
+  border: 1px solid rgba(4, 255, 150, 0.938);
+  border-radius: 0.5em 2em;
+}
+.cardbtncontainer .cardbtn button:hover {
+  background-color: #FF8F7B;
+  border-radius: 2em 0.5em;
+}
+
+.cardtextcontainer {
+  width: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: blue;
+  box-sizing: border-box;
+}
+.cardtextcontainer .cardtext {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #66A2FF;
+  box-sizing: border-box;
+}
+.cardtextcontainer .cardtext a {
+  width: 30%;
+  height: 10em;
+  background-color: #66A2FF;
+  border: 1px solid rgba(4, 255, 150, 0.938);
+  margin: 0.5em;
+  padding: 0.5em;
+  display: flex;
+  transition: box-shadow;
+}
+.cardtextcontainer .cardtext a p {
+  margin: auto;
+}
+.cardtextcontainer .cardtext a:hover {
+  box-shadow: 0px 0px 5px 0.5px #000000;
+}
+.cardtextcontainer .cardtext a:hover p {
+  text-shadow: 0.5px 0.5px 1px #FFFFFF;
+}
+
+body {
+  width: 100vw;
+}
+
+.mainheadercontainer {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100vw;
+}
+.mainheadercontainer .header-name {
+  position: relative;
+  width: 100%;
+  height: 5%;
+  background-color: #0A0410;
+  display: flex;
+}
+.mainheadercontainer .header-name p {
+  color: #FFFFFF;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: auto;
+}
+.mainheadercontainer .header {
+  position: relative;
+  height: 8vh;
+  width: 100%;
+  padding: 0.1em 0.2em;
+  background-image: linear-gradient(to right, #0077FF, #000000);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin-bottom: 5%;
+}
+.mainheadercontainer .header .logo {
+  height: 2.5em;
+  width: 2.5em;
+  background-size: cover;
+}
+.mainheadercontainer .header .logo img {
+  height: 100%;
+  width: 100%;
+}
+.mainheadercontainer .header .esiando-mob {
+  position: relative;
+  display: flex;
+  margin-right: 45%;
+}
+.mainheadercontainer .header .nav-container-menu {
+  height: 1em;
+  width: 2em;
+  display: flex;
+  position: absolute;
+  top: 0.7em;
+  left: 90%;
+}
+.mainheadercontainer .header .nav-container-menu img {
+  height: 150%;
+  width: 100%;
+  background-color: #915DD9;
+  border-radius: 5px;
+}
+.mainheadercontainer .header .nav-container-menu img:hover {
+  background-color: #00DAF1;
+}
+.mainheadercontainer .header .nav-container {
+  height: 100vh;
+  width: 100%;
+  box-sizing: inherit;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #96C8FF;
+  padding: 3em 1em 1em 1em;
+}
+.mainheadercontainer .header .nav-container .esiando {
+  display: none;
+}
+.mainheadercontainer .header .nav-container .nav-container-close {
+  height: 1em;
+  width: 2em;
+  display: flex;
+  position: absolute;
+  top: 0.7em;
+  left: 90%;
+}
+.mainheadercontainer .header .nav-container .nav-container-close img {
+  height: 150%;
+  width: 100%;
+  background-color: #0077FF;
+}
+.mainheadercontainer .header .nav-container .nav-container-close img:hover {
+  background-color: #00DAF1;
+}
+.mainheadercontainer .header .nav-container .nav {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  background-color: #96C8FF;
+}
+.mainheadercontainer .header .nav-container .nav > .ul-one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  height: 70%;
+  padding-left: 1%;
+}
+.mainheadercontainer .header .nav-container .nav > .ul-one > li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90%;
+}
+.mainheadercontainer .header .nav-container .nav > .ul-one > li > a {
+  padding: 10% 4%;
+  height: 90%;
+  font-size: 0.6em;
+  position: relative;
+  color: #000000;
+}
+.mainheadercontainer .header .nav-container .nav > .ul-one > li > a:hover {
+  color: #F9F871;
+}
+.mainheadercontainer .header .nav-container .nav .ul-two {
+  display: none;
+}
+
+@media screen and (min-width: 500px) {
+  .logo {
+    height: 3em;
+    width: 3em;
+  }
+  .nav-container-menu {
+    height: 1em;
+    width: 3em;
+    left: 80%;
+  }
+  .nav-container-close {
+    height: 1em;
+    width: 3em;
+  }
+}
+@media screen and (min-width: 800px) {
+  .header {
+    position: relative;
+    height: 10vh;
+    width: 100%;
+    padding: 0.1em 0.2em;
+    background-image: linear-gradient(to right, #0077FF, #000000);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-bottom: 5%;
+    z-index: 1000;
+  }
+  .header .logo {
+    height: 3.5em;
+    width: 3.5em;
+  }
+  .header .esiando-mob {
+    display: none;
+  }
+  .header .nav-container-menu {
+    display: none;
+  }
+  .header .nav-container {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    background-color: transparent;
+    padding: 0.1em;
+  }
+  .header .nav-container .nav-container-close {
+    display: none;
+  }
+  .header .nav-container .nav {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+  }
+  .header .nav-container .nav .esiando {
+    display: flex;
+    box-sizing: border-box;
+    height: 100%;
+    width: 10%;
+  }
+  .header .nav-container .nav .esiando img {
+    height: 100%;
+    width: 100%;
+  }
+  .header .nav-container .nav > .ul-one {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 90%;
+    padding-left: 1%;
+  }
+  .header .nav-container .nav > .ul-one > li {
+    position: relative;
+    display: flex;
+    height: 90%;
+    padding-top: 0.2em;
+    box-sizing: border-box;
+  }
+  .header .nav-container .nav > .ul-one > li > a {
+    height: 90%;
+    position: relative;
+    color: #FFFFFF;
+    margin: 0em 0.5em;
+    font-size: 0.7em;
+  }
+  .header .nav-container .nav > .ul-one > li > a:hover {
+    color: #F9F871;
+  }
+  .header .nav-container .nav > .ul-one .ul-two {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    position: absolute;
+    top: 100%;
+    left: -5.5em;
+    width: 150px;
+    background-color: #0A0410;
+  }
+  .header .nav-container .nav > .ul-one .ul-two > li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5%;
+    width: 90%;
+  }
+  .header .nav-container .nav > .ul-one .ul-two > li > a {
+    color: #00C897;
+    padding: 3% 4%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.7em;
+    position: relative;
+    transition: border-top 2s, border-right 2.2s, border-bottom 2s, border-left 2.2s, color;
+  }
+  .header .nav-container .nav > .ul-one .ul-two > li > a:hover {
+    border-top: 1px solid #F9F871;
+    border-right: 1px solid #F9F871;
+    border-bottom: 1px solid #F9F871;
+    border-left: 1px solid #F9F871;
+    color: #F9F871;
+  }
+  .header .nav-container .nav > .ul-one .more-li:hover > .ul-two {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .logo {
+    height: 4em;
+    width: 4em;
+  }
+  .ul-one a {
+    font-size: 0.9em;
+  }
+  .ul-two a {
+    font-size: 0.9em;
+  }
+}
